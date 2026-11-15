@@ -1,11 +1,12 @@
 /* toc-app.fr — style commun (couleurs et dégradé de l'app) */
+@font-face { font-family: "Schibsted"; src: url("/fonts/schibsted-grotesk.woff2") format("woff2"); font-weight: 400 900; font-display: swap; }
 :root {
   --cream: #F0EFEB; --ink: #202020; --grey: #706E68; --line: #E4E2DC; --white: #fff;
   --yellow: #FFB020; --coral: #FF5030; --orange: #FF7648;
   --grad: radial-gradient(120% 90% at 0% 100%, #FEC157 0%, rgba(254,193,87,0) 60%),
           radial-gradient(120% 90% at 100% 100%, #FD8C62 0%, rgba(253,140,98,0) 62%),
           linear-gradient(180deg, #EDEBE8 0%, #F3E2D2 100%);
-  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font: "Schibsted", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }

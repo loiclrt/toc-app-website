@@ -4,182 +4,189 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>toc · Le doute ne devrait pas décider de ta journée</title>
-<meta name="description" content="toc vous aide à valider une vérification du quotidien d'un geste lent, une seule fois, puis à reprendre votre journée. Sans compte : vos données restent sur votre téléphone.">
+<meta name="description" content="toc aide à valider une vérification du quotidien d'un geste lent, une seule fois, puis à reprendre sa journée. Sans compte : les données restent sur le téléphone.">
 <meta property="og:title" content="toc · Le doute ne devrait pas décider de ta journée">
 <meta property="og:description" content="La porte, le four, le fer à repasser. Trois tapes lentes, une trace claire, et on avance.">
 <meta property="og:image" content="https://toc-app.fr/media/instagram/testeurs-android-post1-v5.jpg">
 <meta property="og:url" content="https://toc-app.fr/">
-<meta name="theme-color" content="#EEEBE6">
+<meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
 <link rel="alternate" hreflang="en" href="https://toc-app.fr/en/">
-<link rel="preload" href="/fonts/schibsted-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/roobert-bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/home.css">
-<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
 
-<header class="bar">
-  <div class="shell">
+<header class="nav">
+  <div class="in">
     <a href="/" aria-label="toc, accueil"><img src="/img/logo.webp" alt="toc" width="360" height="157"></a>
-    <nav>
-      <a href="#rituel" class="hide-sm">Le geste</a>
-      <a href="#premium" class="hide-sm">Premium</a>
-      <a href="#android">Android</a>
-      <a class="get" href="https://apps.apple.com/fr/app/id6762998398">Télécharger</a>
-    </nav>
+    <ul>
+      <li><a href="#geste">Le geste</a></li>
+      <li><a href="#app">L’app</a></li>
+      <li><a href="#premium">Premium</a></li>
+      <li><a href="#android">Android</a></li>
+    </ul>
+    <a class="dl" href="https://apps.apple.com/fr/app/id6762998398">Télécharger</a>
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="shell">
-      <div class="hero-copy">
-        <p class="kicker rv"><i></i>Sur iPhone · Android en test</p>
-        <h1 class="rv">Le doute ne devrait pas décider de <em>ta journée.</em></h1>
-        <p class="lead rv">La porte, le four, le fer à repasser&nbsp;: <strong>vérifier une fois</strong>, d’un geste lent, puis passer à la suite. toc garde la trace, la journée reprend.</p>
-        <div class="actions rv">
-          <a class="btn btn-ink" href="https://apps.apple.com/fr/app/id6762998398">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.4 12.6c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.1-2.8.9-3.5.9-.7 0-1.8-.9-3-.8-1.5 0-3 .9-3.8 2.3-1.6 2.8-.4 7 1.2 9.3.8 1.1 1.7 2.4 2.9 2.3 1.2 0 1.6-.7 3-.7s1.8.7 3 .7c1.3 0 2.1-1.1 2.8-2.3.9-1.3 1.3-2.6 1.3-2.6s-2.5-1-2.5-3.8zM14.1 5.8c.6-.8 1.1-1.8 1-2.8-.9 0-2 .6-2.7 1.4-.6.7-1.1 1.7-1 2.7 1 .1 2-.5 2.7-1.3z"/></svg>
-            Télécharger sur iPhone
-          </a>
-          <a class="link" href="#rituel">Essayer le geste</a>
-        </div>
-      </div>
-      <div class="hero-art">
-        <img src="/img/main-telephone.webp" alt="Une main tient un téléphone ouvert sur toc : fer à repasser, porte, plaques de cuisson et robinet sont validés, le frein à main attend." width="655" height="879" fetchpriority="high">
+  <!-- 1. Héro -->
+  <section class="tile grad hero">
+    <div class="copy">
+      <img class="logo" src="/img/logo.webp" alt="toc" width="360" height="157">
+      <h1>Le doute ne devrait pas décider de ta journée.</h1>
+      <p class="sub">Vérifier une fois. Puis passer à la suite.</p>
+      <div class="cta">
+        <a class="btn fill" href="https://apps.apple.com/fr/app/id6762998398">Télécharger sur iPhone</a>
+        <a class="btn line" href="#geste">Essayer le geste</a>
       </div>
     </div>
-    <p class="hero-note">Gratuit pour commencer · Sans compte · Français et anglais</p>
-  </section>
-
-  <section class="ritual" id="rituel">
-    <div class="shell">
-      <div>
-        <p class="eyebrow rv">Le geste</p>
-        <h2 class="h2 rv">Trois tapes,<br><em>lentement.</em></h2>
-        <p class="body rv">Au moment de fermer ou d'éteindre, vous tapez trois fois sur le cercle. Pas plus vite que ça. Le geste est fait dans le moment présent, et toc en garde la trace.</p>
-        <p class="body rv">Ensuite, l'intention est simple&nbsp;: passer à autre chose, même s’il reste un doute. Essayez ici.</p>
-      </div>
-      <div class="demo rv" id="demo">
-        <p class="demo-done" aria-live="polite"></p>
-        <button type="button" aria-label="Taper pour valider, 0 sur 3">
-          <span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span>
-          <span class="core">0</span>
-        </button>
-        <p class="demo-label">Tapez ici</p>
-      </div>
+    <div class="fan" aria-hidden="true">
+      <div class="device d2"><img src="/img/trois-tapes.webp" alt="" width="560" height="1240"></div>
+      <div class="device d3"><img src="/img/historique.webp" alt="" width="560" height="1240"></div>
+      <div class="device d1"><img src="/img/accueil.webp" alt="" width="560" height="1240" fetchpriority="high"></div>
     </div>
   </section>
 
-  <section class="screens" aria-labelledby="ecrans">
-    <div class="shell">
-      <div class="head">
-        <h2 class="h2 rv" id="ecrans">Une trace,<br>pas une alarme.</h2>
-        <p class="body rv">Vos vérifications du jour, le geste, puis l'historique. L'historique sert à voir vos habitudes dans le temps, pas à revérifier.</p>
-      </div>
-      <div class="rail">
-        <figure class="rv">
-          <div class="phone"><img src="/img/accueil.webp" alt="Écran d'accueil : la liste des vérifications du jour, avec l'heure de chaque validation." decoding="async" width="560" height="1240"></div>
-          <figcaption><b>01</b><strong>Vos vérifications</strong><span>La porte, le frein à main, les plaques. Celles que vous choisissez.</span></figcaption>
-        </figure>
-        <figure class="rv">
-          <div class="phone"><img src="/img/trois-tapes.webp" alt="Écran de validation du fer à repasser : un cercle à taper trois fois." decoding="async" width="560" height="1240"></div>
-          <figcaption><b>02</b><strong>Le geste</strong><span>Trois tapes, et le téléphone vibre doucement.</span></figcaption>
-        </figure>
-        <figure class="rv">
-          <div class="phone"><img src="/img/historique.webp" alt="Historique : 68 vérifications enregistrées, avec la date et l'heure." decoding="async" width="560" height="1240"></div>
-          <figcaption><b>03</b><strong>La trace</strong><span>Date et heure, photo si vous le voulez. Puis on referme.</span></figcaption>
-        </figure>
-      </div>
+  <!-- 2. Le geste -->
+  <section class="tile gray gesture" id="geste">
+    <div class="copy">
+      <p class="eyebrow c">Le geste</p>
+      <h2 class="t-xl">Trois tapes. Lentement.</h2>
+      <p class="sub sm">Au moment de fermer ou d’éteindre, tu tapes trois fois sur le cercle.<br>toc garde la trace. Toi, tu passes à la suite.</p>
+    </div>
+    <div class="demo" id="demo">
+      <p class="demo-done" aria-live="polite"></p>
+      <button type="button" aria-label="Taper pour valider, 0 sur 3">
+        <span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span>
+        <span class="core">0</span>
+      </button>
+      <p class="demo-label">Essaie, tape ici</p>
     </div>
   </section>
 
-  <section class="nots" aria-labelledby="nots">
-    <div class="shell">
-      <p class="eyebrow rv">Ce que toc ne fait pas</p>
-      <h2 class="h2 rv" id="nots">Rien qui ajoute de la pression.</h2>
-      <ol>
-        <li class="rv"><strong><s>Un compte</s></strong><span>Pas d'e-mail, pas de mot de passe. Vous ouvrez l'app, vous commencez.</span></li>
-        <li class="rv"><strong><s>Vos données chez nous</s></strong><span>Vérifications, historique, photos&nbsp;: tout reste sur votre téléphone. Nous n'y avons pas accès.</span></li>
-        <li class="rv"><strong><s>Des scores et des séries</s></strong><span>Des chiffres simples sur votre semaine, rien à « ne pas casser ».</span></li>
-        <li class="rv"><strong><s>De la publicité</s></strong><span>Aucun outil de suivi publicitaire. Aucune donnée vendue.</span></li>
-      </ol>
+  <!-- 3. Engagement -->
+  <section class="tile dark promise">
+    <div class="copy">
+      <p class="eyebrow c">Rien qui ajoute de la pression</p>
+      <h2 class="t-xl">Ce que tu notes reste à toi.</h2>
+      <p class="sub sm">Tes vérifications, ton historique et tes photos restent sur ton téléphone.</p>
     </div>
+    <ul>
+      <li><div class="ico" aria-hidden="true"></div><strong>Aucun compte</strong><span>Pas d’e-mail, pas de mot de passe.</span></li>
+      <li><div class="ico" aria-hidden="true"></div><strong>Aucune pub</strong><span>Aucun suivi publicitaire. Aucune donnée vendue.</span></li>
+      <li><div class="ico" aria-hidden="true"></div><strong>Aucun score</strong><span>Pas de série à « ne pas casser ».</span></li>
+    </ul>
   </section>
 
-  <section class="plans" id="premium">
-    <div class="shell grid">
-      <div>
-        <p class="eyebrow rv">Gratuit et Premium</p>
-        <h2 class="h2 rv">Commencez sans payer.</h2>
-        <p class="body rv">La version gratuite suffit pour deux vérifications. Premium s'essaie 7 jours, puis se paie au mois ou à l'année.</p>
+  <!-- 4. Tuiles par deux -->
+  <div class="grid2" id="app">
+    <section class="tile gray">
+      <div class="copy">
+        <h2 class="t-l">L’historique</h2>
+        <p class="sub sm">Une trace, pas une alarme.</p>
+        <div class="cta"><a class="more" href="#premium">Voir Premium</a></div>
       </div>
-      <div class="rv">
-        <div class="tiers">
-          <div class="tier">
-            <div><h3>Gratuit</h3><p class="sub">Sans limite de durée</p></div>
-            <ul><li>2 vérifications</li><li>7 jours d'historique</li><li>1 rappel</li><li>Le geste des trois tapes et les widgets</li></ul>
-          </div>
-          <div class="tier premium">
-            <div><h3>Premium</h3><p class="sub">7 jours d'essai gratuit</p></div>
-            <ul><li>Vérifications illimitées</li><li>Historique complet</li><li>Photo ou vidéo au moment de valider</li><li>Un rappel pour chaque vérification</li></ul>
-          </div>
-        </div>
-        <p class="fine">Le prix s'affiche dans l'app et dans la boutique avant tout achat. Résiliable à tout moment dans les réglages de l'App Store ou de Google Play. <a href="/cgv/">Conditions générales de vente</a>.</p>
+      <div class="device"><img src="/img/historique.webp" alt="Historique : les vérifications validées avec leur date et leur heure." width="560" height="1240" loading="lazy"></div>
+    </section>
+    <section class="tile dark">
+      <div class="copy">
+        <h2 class="t-l">Les widgets</h2>
+        <p class="sub sm">Une vérification, depuis l’écran d’accueil.</p>
+        <div class="cta"><a class="more" href="https://apps.apple.com/fr/app/id6762998398">Télécharger</a></div>
+      </div>
+      <div class="device"><img src="/img/widget.webp" alt="Écran d'accueil de l'iPhone avec les widgets toc." width="560" height="1240" loading="lazy"></div>
+    </section>
+    <section class="tile dark">
+      <div class="copy">
+        <h2 class="t-l">Photo ou vidéo</h2>
+        <p class="sub sm">Facultatives. Elles restent sur ton téléphone.</p>
+      </div>
+      <div class="device"><img src="/img/preuve.webp" alt="Ajout d'une photo au moment de valider une vérification." width="560" height="1240" loading="lazy"></div>
+    </section>
+    <section class="tile gray">
+      <div class="copy">
+        <h2 class="t-l">Ta semaine</h2>
+        <p class="sub sm">Des chiffres simples. Pas de score.</p>
+      </div>
+      <div class="device"><img src="/img/progres.webp" alt="Écran Progrès : les vérifications de la semaine." width="560" height="1240" loading="lazy"></div>
+    </section>
+  </div>
+
+  <!-- 5. Gratuit / Premium -->
+  <section class="tile plans" id="premium">
+    <div class="copy">
+      <h2 class="t-xl">Commence sans payer.</h2>
+      <p class="sub sm">Premium s’essaie gratuitement pendant 7 jours.</p>
+    </div>
+    <div class="cols">
+      <div class="col">
+        <h3>Gratuit</h3>
+        <p class="price">Sans limite de durée</p>
+        <ul>
+          <li><b>2</b>vérifications</li>
+          <li><b>7 jours</b>d’historique</li>
+          <li><b>1</b>rappel</li>
+          <li><b class="no">—</b>photo ou vidéo</li>
+        </ul>
+        <a class="btn line" href="https://apps.apple.com/fr/app/id6762998398">Télécharger</a>
+      </div>
+      <div class="col">
+        <h3>Premium</h3>
+        <p class="price">Au mois ou à l’année</p>
+        <ul>
+          <li><b>Illimitées</b>vérifications</li>
+          <li><b>Complet</b>historique</li>
+          <li><b>1 par vérification</b>rappels</li>
+          <li><b>Oui</b>photo ou vidéo</li>
+        </ul>
+        <a class="btn fill" href="https://apps.apple.com/fr/app/id6762998398">Essayer 7 jours</a>
       </div>
     </div>
+    <p class="fine">Le prix s’affiche dans l’app et dans la boutique avant tout achat. Résiliable à tout moment dans les réglages de l’App Store ou de Google Play. <a href="/cgv/">Conditions générales de vente</a>.</p>
   </section>
 
-  <section class="care">
-    <div class="shell">
-      <p><strong>toc est une app de bien-être et de suivi personnel.</strong> Elle ne diagnostique, ne traite ni ne guérit aucune maladie, et ne remplace pas l'accompagnement d'un professionnel de santé. Si les vérifications vous prennent beaucoup de temps, un professionnel peut vous aider. En cas d'urgence, appelez le 112.</p>
-    </div>
-  </section>
-
-  <section class="final" id="android">
-    <div class="shell">
-      <h2 class="h2 rv">Sur iPhone aujourd’hui.<br><em>Bientôt</em> sur Android.</h2>
-      <div class="rv">
-        <p>La version Android est en test. Vous avez un Android 10 ou plus&nbsp;? Écrivez-nous avec l'adresse Gmail de votre compte Google Play pour l'essayer avant tout le monde.</p>
-        <div class="actions">
-          <a class="btn btn-ink" href="https://apps.apple.com/fr/app/id6762998398">Télécharger sur iPhone</a>
-          <a class="link" href="mailto:contact@toc-app.fr?subject=Testeur%20Android%20toc">Devenir testeur Android</a>
-        </div>
+  <!-- 6. Android -->
+  <section class="tile grad" id="android" style="padding-bottom:96px">
+    <div class="copy">
+      <p class="eyebrow c">Bientôt</p>
+      <h2 class="t-xl">toc arrive sur Android.</h2>
+      <p class="sub sm">La version Android est en test. Tu as un Android 10 ou plus&nbsp;?<br>Écris-nous avec l’adresse Gmail de ton compte Google Play.</p>
+      <div class="cta">
+        <a class="btn fill" href="mailto:contact@toc-app.fr?subject=Testeur%20Android%20toc">Devenir testeur</a>
       </div>
     </div>
   </section>
 </main>
 
 <footer class="foot">
-  <div class="shell">
-    <span>toc · Édité par Loïc Lauret, Marseille · <a href="mailto:contact@toc-app.fr">contact@toc-app.fr</a></span>
-    <nav>
-      <a href="/cgv/">CGV</a>
-      <a href="/cgu/">Conditions d'utilisation</a>
-      <a href="/confidentialite/">Confidentialité</a>
-      <a href="/mentions-legales/">Mentions légales</a>
-      <a href="/en/">English</a>
-    </nav>
+  <div class="in">
+    <div class="notes">
+      <p>toc est une app de bien-être et de suivi personnel. Elle ne diagnostique, ne traite ni ne guérit aucune maladie, et ne remplace pas l’accompagnement d’un professionnel de santé. Si les vérifications te prennent beaucoup de temps, un professionnel peut t’aider. En cas d’urgence, appelle le 112.</p>
+      <p>iPhone et App Store sont des marques d’Apple Inc. Android et Google Play sont des marques de Google LLC.</p>
+    </div>
+    <div class="row">
+      <span>toc · Édité par Loïc Lauret, Marseille · <a href="mailto:contact@toc-app.fr">contact@toc-app.fr</a></span>
+      <nav>
+        <a href="/cgv/">CGV</a>
+        <a href="/cgu/">Conditions d’utilisation</a>
+        <a href="/confidentialite/">Confidentialité</a>
+        <a href="/mentions-legales/">Mentions légales</a>
+        <a href="/en/">English</a>
+      </nav>
+    </div>
   </div>
 </footer>
 
 <script>
 (() => {
-  // Apparition douce au défilement
-  const els = document.querySelectorAll('.rv');
-  if (!('IntersectionObserver' in window)) { els.forEach(e => e.classList.add('in')); }
-  else {
-    const io = new IntersectionObserver((entries) => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -8% 0px' });
-    els.forEach(e => io.observe(e));
-  }
-
-  // Démo des trois tapes
   const demo = document.getElementById('demo'); if (!demo) return;
   const btn = demo.querySelector('button'), core = demo.querySelector('.core'), label = demo.querySelector('.demo-label'), done = demo.querySelector('.demo-done');
   let n = 0, timer;
   btn.addEventListener('click', () => {
-    if (n >= 3) { n = 0; demo.classList.remove('done'); core.textContent = '0'; label.textContent = 'Tapez ici'; done.textContent = ''; btn.setAttribute('aria-label', 'Taper pour valider, 0 sur 3'); return; }
+    if (n >= 3) { n = 0; demo.classList.remove('done'); core.textContent = '0'; label.textContent = 'Essaie, tape ici'; done.textContent = ''; btn.setAttribute('aria-label', 'Taper pour valider, 0 sur 3'); return; }
     n++;
     core.textContent = n;
     btn.setAttribute('aria-label', 'Taper pour valider, ' + n + ' sur 3');

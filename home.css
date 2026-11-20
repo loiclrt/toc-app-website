@@ -73,9 +73,9 @@ a { color: inherit; }
 .hero .logo { height: 44px; width: auto; margin: 0 auto 18px; }
 .fan { position: relative; height: 470px; margin-top: 20px; }
 .fan .device { position: absolute; left: 50%; top: 24px; }
-.fan .d1 { transform: translateX(-50%); z-index: 3; width: 320px; }
-.fan .d2 { transform: translateX(-118%) translateY(70px) rotate(-6deg); z-index: 2; }
-.fan .d3 { transform: translateX(18%) translateY(70px) rotate(6deg); z-index: 2; }
+.fan .d1 { transform: translateX(-50%) translateY(calc(var(--y, 0px) + var(--e))); z-index: 3; width: 320px; }
+.fan .d2 { transform: translateX(calc(-118% - var(--x, 0px) + var(--ex))) translateY(calc(70px + var(--y, 0px) + var(--e))) rotate(calc(-6deg - var(--r, 0deg) + var(--er))); z-index: 2; }
+.fan .d3 { transform: translateX(calc(18% + var(--x, 0px) - var(--ex))) translateY(calc(70px + var(--y, 0px) + var(--e))) rotate(calc(6deg + var(--r, 0deg) - var(--er))); z-index: 2; }
 
 /* geste */
 .gesture .copy { padding-top: 64px; }
@@ -103,14 +103,14 @@ a { color: inherit; }
 .promise li strong { display: block; font-size: 28px; font-weight: 700; letter-spacing: .004em; }
 .promise li span { display: block; margin-top: 8px; color: #a1a1a6; font-size: 17px; }
 .promise .ico { width: 56px; height: 56px; margin: 0 auto 18px; border-radius: 50%; border: 2px solid #f5f5f7; position: relative; }
-.promise .ico::after { content: ""; position: absolute; left: 50%; top: 50%; width: 70%; height: 2px; background: var(--accent-dark); transform: translate(-50%, -50%) rotate(-45deg); }
+.promise .ico { border: 0; background: radial-gradient(circle, var(--accent-dark) 0 18%, rgba(255,122,82,.45) 19% 40%, rgba(255,122,82,.18) 41% 66%, transparent 67%); }
 
 /* grille de tuiles par deux */
-.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; padding: 12px; background: var(--paper); }
-.grid2 .tile { height: 620px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0; padding: 0; }
+.grid2 .tile { height: 720px; }
 .grid2 .copy { padding-top: 52px; }
 .grid2 .t-l { font-size: clamp(30px, 3.2vw, 40px); }
-.grid2 .device { position: absolute; left: 50%; bottom: -230px; transform: translateX(-50%); width: 280px; }
+.grid2 .device { position: absolute; left: 50%; bottom: -230px; transform: translateX(-50%) translateY(var(--y, 0px)) scale(var(--s, 1)); transform-origin: 50% 0; width: 280px; will-change: transform; }
 
 /* tarifs */
 .plans { padding-bottom: 96px; }
@@ -148,10 +148,10 @@ a { color: inherit; }
   .fan .device { width: 230px; padding: 9px; border-radius: 44px; }
   .fan .device img { border-radius: 36px; }
   .fan .d1 { width: 250px; }
-  .fan .d2 { transform: translateX(-112%) translateY(60px) rotate(-6deg); }
-  .fan .d3 { transform: translateX(12%) translateY(60px) rotate(6deg); }
-  .grid2 { grid-template-columns: 1fr; padding: 12px 0; }
-  .grid2 .tile { height: 560px; }
+  .fan .d2 { transform: translateX(calc(-112% - var(--x, 0px) + var(--ex))) translateY(calc(60px + var(--y, 0px) + var(--e))) rotate(calc(-6deg - var(--r, 0deg) + var(--er))); }
+  .fan .d3 { transform: translateX(calc(12% + var(--x, 0px) - var(--ex))) translateY(calc(60px + var(--y, 0px) + var(--e))) rotate(calc(6deg + var(--r, 0deg) - var(--er))); }
+  .grid2 { grid-template-columns: 1fr; }
+  .grid2 .tile { height: 660px; }
   .promise ul { grid-template-columns: 1fr; gap: 36px; }
 }
 @media (max-width: 480px) {
@@ -165,4 +165,50 @@ a { color: inherit; }
   .col { padding: 0; }
   .col + .col { border-left: 0; border-top: 1px solid #d2d2d7; padding-top: 40px; }
   .btn { font-size: 16px; height: 42px; }
+}
+
+/* ---------- finitions (audits Vercel, Apple, accessibilité) ---------- */
+.skip { position: absolute; left: 12px; top: -60px; z-index: 20; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 10px; text-decoration: none; font-size: 15px; }
+.skip:focus { top: 12px; }
+[id] { scroll-margin-top: 64px; }
+a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 980px; }
+.btn { transition: background .2s, color .2s, transform .1s ease-out; touch-action: manipulation; }
+.btn:active { transform: scale(.97); }
+.demo button { touch-action: manipulation; user-select: none; -webkit-user-select: none; }
+.nav { border-bottom: 0; box-shadow: 0 1px 0 rgba(0, 0, 0, .05); }
+.foot { letter-spacing: 0; }
+.col li b, .core { font-variant-numeric: tabular-nums; }
+@media (prefers-reduced-transparency: reduce) { .nav { background: #fbfbfd; -webkit-backdrop-filter: none; backdrop-filter: none; } }
+@media (prefers-contrast: more) { .sub, .col .price, .fine, .foot { color: var(--ink); } }
+.promise li strong, .t-l, .t-xl, .sub { text-wrap: balance; }
+.fan .device { will-change: transform; }
+
+/* ---------- animations renforcées ---------- */
+@property --e  { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --ex { syntax: "<length>"; inherits: true; initial-value: 0px; }
+@property --er { syntax: "<angle>";  inherits: true; initial-value: 0deg; }
+.fan { --e: 0px; --ex: 0px; --er: 0deg; }
+.js .fan:not(.in) { --e: 320px; --ex: 150px; --er: 6deg; }
+.fan .device { transition: --e 1.3s var(--ease), --ex 1.1s var(--ease) .35s, --er 1.1s var(--ease) .35s; }
+.fan .d1 { transition-delay: .1s; }
+.js .hero .copy > * { opacity: 0; transform: translateY(24px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js .hero.in .copy > * { opacity: 1; transform: none; }
+.hero .copy > :nth-child(2) { transition-delay: .08s; } .hero .copy > :nth-child(3) { transition-delay: .16s; } .hero .copy > :nth-child(4) { transition-delay: .24s; }
+.js .reveal { opacity: 0; transform: translateY(36px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+.js .reveal.in { opacity: 1; transform: none; }
+/* le cercle respire tant qu'on ne l'a pas touché */
+@keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.07); } }
+.demo:not(.touched) .ring { animation: breathe 3.2s ease-in-out infinite; }
+.demo:not(.touched) .ring:nth-child(2) { animation-delay: .15s; }
+.demo:not(.touched) .ring:nth-child(3) { animation-delay: .3s; }
+.demo:not(.touched) .ring:nth-child(4) { animation-delay: .45s; }
+/* onde autour des icônes */
+@keyframes ripple { from { transform: scale(.7); opacity: .9; } to { transform: scale(1.7); opacity: 0; } }
+.promise .ico::after { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--accent-dark); animation: ripple 2.6s var(--ease) infinite; }
+.promise li:nth-child(2) .ico::after { animation-delay: .5s; }
+.promise li:nth-child(3) .ico::after { animation-delay: 1s; }
+@media (prefers-reduced-motion: reduce) {
+  .js .fan:not(.in) { --e: 0px; --ex: 0px; --er: 0deg; }
+  .js .hero .copy > *, .js .reveal { opacity: 1; transform: none; }
+  .demo .ring, .promise .ico::after { animation: none !important; }
 }

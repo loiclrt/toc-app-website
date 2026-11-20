@@ -2,21 +2,29 @@
 <html lang="fr">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>toc · Le doute ne devrait pas décider de ta journée</title>
 <meta name="description" content="toc aide à valider une vérification du quotidien d'un geste lent, une seule fois, puis à reprendre sa journée. Sans compte : les données restent sur le téléphone.">
 <meta property="og:title" content="toc · Le doute ne devrait pas décider de ta journée">
 <meta property="og:description" content="La porte, le four, le fer à repasser. Trois tapes lentes, une trace claire, et on avance.">
-<meta property="og:image" content="https://toc-app.fr/media/instagram/testeurs-android-post1-v5.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:image" content="https://toc-app.fr/img/partage.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:url" content="https://toc-app.fr/">
 <meta name="theme-color" content="#ffffff">
 <link rel="icon" href="/img/favicon.png">
 <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
-<link rel="alternate" hreflang="en" href="https://toc-app.fr/en/">
+<link rel="canonical" href="https://toc-app.fr/">
 <link rel="preload" href="/fonts/roobert-bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/home.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "MobileApplication", "name": "toc", "operatingSystem": "iOS", "applicationCategory": "LifestyleApplication", "description": "toc aide à valider une vérification du quotidien d'un geste lent, une seule fois, puis à reprendre sa journée.", "url": "https://toc-app.fr/", "installUrl": "https://apps.apple.com/fr/app/id6762998398", "inLanguage": ["fr", "en"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "author": {"@type": "Person", "name": "Loïc Lauret"}}</script>
 </head>
 <body>
+<a class="skip" href="#contenu">Aller au contenu</a>
 
 <header class="nav">
   <div class="in">
@@ -31,7 +39,7 @@
   </div>
 </header>
 
-<main>
+<main id="contenu">
   <!-- 1. Héro -->
   <section class="tile grad hero">
     <div class="copy">
@@ -52,12 +60,12 @@
 
   <!-- 2. Le geste -->
   <section class="tile gray gesture" id="geste">
-    <div class="copy">
+    <div class="copy reveal">
       <p class="eyebrow c">Le geste</p>
       <h2 class="t-xl">Trois tapes. Lentement.</h2>
       <p class="sub sm">Au moment de fermer ou d’éteindre, tu tapes trois fois sur le cercle.<br>toc garde la trace. Toi, tu passes à la suite.</p>
     </div>
-    <div class="demo" id="demo">
+    <div class="demo reveal" id="demo">
       <p class="demo-done" aria-live="polite"></p>
       <button type="button" aria-label="Taper pour valider, 0 sur 3">
         <span class="ring"></span><span class="ring"></span><span class="ring"></span><span class="ring"></span>
@@ -69,30 +77,30 @@
 
   <!-- 3. Engagement -->
   <section class="tile dark promise">
-    <div class="copy">
+    <div class="copy reveal">
       <p class="eyebrow c">Rien qui ajoute de la pression</p>
       <h2 class="t-xl">Ce que tu notes reste à toi.</h2>
       <p class="sub sm">Tes vérifications, ton historique et tes photos restent sur ton téléphone.</p>
     </div>
-    <ul>
-      <li><div class="ico" aria-hidden="true"></div><strong>Aucun compte</strong><span>Pas d’e-mail, pas de mot de passe.</span></li>
-      <li><div class="ico" aria-hidden="true"></div><strong>Aucune pub</strong><span>Aucun suivi publicitaire. Aucune donnée vendue.</span></li>
-      <li><div class="ico" aria-hidden="true"></div><strong>Aucun score</strong><span>Pas de série à « ne pas casser ».</span></li>
+    <ul class="reveal">
+      <li><div class="ico" aria-hidden="true"></div><strong>Tu commences tout de suite</strong><span>Tu ouvres l’app et tu ajoutes ta première vérification. Aucun compte à créer.</span></li>
+      <li><div class="ico" aria-hidden="true"></div><strong>Rien ne quitte ton téléphone</strong><span>Nous n’avons accès à aucune de tes vérifications, et l’app n’affiche aucune publicité.</span></li>
+      <li><div class="ico" aria-hidden="true"></div><strong>Ta semaine, en clair</strong><span>Le nombre de vérifications, jour après jour. Rien à «&nbsp;ne pas casser&nbsp;».</span></li>
     </ul>
   </section>
 
   <!-- 4. Tuiles par deux -->
   <div class="grid2" id="app">
     <section class="tile gray">
-      <div class="copy">
+      <div class="copy reveal">
         <h2 class="t-l">L’historique</h2>
-        <p class="sub sm">Une trace, pas une alarme.</p>
+        <p class="sub sm">Chaque vérification, avec sa date et son heure.</p>
         <div class="cta"><a class="more" href="#premium">Voir Premium</a></div>
       </div>
       <div class="device"><img src="/img/historique.webp" alt="Historique : les vérifications validées avec leur date et leur heure." width="560" height="1240" loading="lazy"></div>
     </section>
     <section class="tile dark">
-      <div class="copy">
+      <div class="copy reveal">
         <h2 class="t-l">Les widgets</h2>
         <p class="sub sm">Une vérification, depuis l’écran d’accueil.</p>
         <div class="cta"><a class="more" href="https://apps.apple.com/fr/app/id6762998398">Télécharger</a></div>
@@ -100,16 +108,16 @@
       <div class="device"><img src="/img/widget.webp" alt="Écran d'accueil de l'iPhone avec les widgets toc." width="560" height="1240" loading="lazy"></div>
     </section>
     <section class="tile dark">
-      <div class="copy">
+      <div class="copy reveal">
         <h2 class="t-l">Photo ou vidéo</h2>
-        <p class="sub sm">Facultatives. Elles restent sur ton téléphone.</p>
+        <p class="sub sm">Si tu veux, une photo au moment de valider. Elle reste sur ton téléphone.</p>
       </div>
       <div class="device"><img src="/img/preuve.webp" alt="Ajout d'une photo au moment de valider une vérification." width="560" height="1240" loading="lazy"></div>
     </section>
     <section class="tile gray">
-      <div class="copy">
+      <div class="copy reveal">
         <h2 class="t-l">Ta semaine</h2>
-        <p class="sub sm">Des chiffres simples. Pas de score.</p>
+        <p class="sub sm">Combien de vérifications, jour après jour.</p>
       </div>
       <div class="device"><img src="/img/progres.webp" alt="Écran Progrès : les vérifications de la semaine." width="560" height="1240" loading="lazy"></div>
     </section>
@@ -117,11 +125,11 @@
 
   <!-- 5. Gratuit / Premium -->
   <section class="tile plans" id="premium">
-    <div class="copy">
+    <div class="copy reveal">
       <h2 class="t-xl">Commence sans payer.</h2>
       <p class="sub sm">Premium s’essaie gratuitement pendant 7 jours.</p>
     </div>
-    <div class="cols">
+    <div class="cols reveal">
       <div class="col">
         <h3>Gratuit</h3>
         <p class="price">Sans limite de durée</p>
@@ -150,7 +158,7 @@
 
   <!-- 6. Android -->
   <section class="tile grad" id="android" style="padding-bottom:96px">
-    <div class="copy">
+    <div class="copy reveal">
       <p class="eyebrow c">Bientôt</p>
       <h2 class="t-xl">toc arrive sur Android.</h2>
       <p class="sub sm">La version Android est en test. Tu as un Android 10 ou plus&nbsp;?<br>Écris-nous avec l’adresse Gmail de ton compte Google Play.</p>
@@ -185,7 +193,7 @@
   const demo = document.getElementById('demo'); if (!demo) return;
   const btn = demo.querySelector('button'), core = demo.querySelector('.core'), label = demo.querySelector('.demo-label'), done = demo.querySelector('.demo-done');
   let n = 0, timer;
-  btn.addEventListener('click', () => {
+  const step = () => {
     if (n >= 3) { n = 0; demo.classList.remove('done'); core.textContent = '0'; label.textContent = 'Essaie, tape ici'; done.textContent = ''; btn.setAttribute('aria-label', 'Taper pour valider, 0 sur 3'); return; }
     n++;
     core.textContent = n;
@@ -193,11 +201,52 @@
     demo.classList.add('pulse'); clearTimeout(timer); timer = setTimeout(() => demo.classList.remove('pulse'), 220);
     if (navigator.vibrate) navigator.vibrate(n === 3 ? [12, 60, 12] : 10);
     if (n === 3) {
-      const d = new Date(), t = String(d.getHours()).padStart(2, '0') + ':' + String(d.getMinutes()).padStart(2, '0');
+      const t = new Intl.DateTimeFormat('fr-FR', { hour: '2-digit', minute: '2-digit' }).format(new Date());
       core.textContent = '✓'; label.textContent = 'C’est fait'; done.textContent = 'Validé à ' + t + '. On passe à la suite.';
       demo.classList.add('done');
     }
-  });
+  };
+  // Apple : la réponse part dès le toucher, pas au relâchement ; le clavier passe par click (detail = 0)
+  btn.addEventListener('pointerdown', (e) => { if (e.button === 0) { demo.classList.add('touched'); step(); } });
+  btn.addEventListener('click', (e) => { if (e.detail === 0) { demo.classList.add('touched'); step(); } });
+})();
+</script>
+<script>
+(() => {
+  // Les téléphones montent au défilement (transform seulement, désactivé si « réduire les animations »)
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) { document.querySelectorAll('.hero, .fan, .reveal').forEach(el => el.classList.add('in')); return; }
+  const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
+  const tiles = [...document.querySelectorAll('.grid2 .tile')].map(t => [t, t.querySelector('.device')]).filter(x => x[1]);
+  const fan = document.querySelector('.fan'), side = fan ? fan.querySelectorAll('.d2, .d3') : [], main = fan && fan.querySelector('.d1');
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    const vh = innerHeight;
+    for (const [t, d] of tiles) {
+      const r = t.getBoundingClientRect();
+      if (r.bottom < -200 || r.top > vh + 200) continue;
+      const p = clamp((vh - r.top) / (vh + r.height), 0, 1);
+      // jamais au-dessus du texte de la tuile : on garde 28 px sous le dernier élément du texte
+      const copy = t.querySelector('.copy'), minY = copy.offsetTop + copy.offsetHeight + 32 - d.offsetTop;
+      // le téléphone se cale juste sous le texte ; il part 90 px plus bas et rejoint sa place quand la tuile est bien visible
+      const k = clamp(1 - p * 2.2, 0, 1);
+      d.style.setProperty('--y', (minY + k * 220).toFixed(1) + 'px');
+      d.style.setProperty('--s', (1 - k * 0.12).toFixed(3));
+    }
+    if (fan) {
+      const p = clamp(scrollY / (vh * 0.8), 0, 1);
+      main.style.setProperty('--y', (-p * 160).toFixed(1) + 'px');
+      side.forEach(d => { d.style.setProperty('--y', (-p * 90).toFixed(1) + 'px'); d.style.setProperty('--x', (p * 90).toFixed(1) + 'px'); d.style.setProperty('--r', (p * 7).toFixed(2) + 'deg'); });
+    }
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking = true; requestAnimationFrame(update); } }, { passive: true });
+  addEventListener('resize', update);
+  update();
+  // entrée du héro au chargement
+  requestAnimationFrame(() => requestAnimationFrame(() => { document.querySelector('.hero').classList.add('in'); if (fan) fan.classList.add('in'); }));
+  // révélation douce des blocs au défilement
+  const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }), { rootMargin: '0px 0px -12% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 })();
 </script>
 </body>

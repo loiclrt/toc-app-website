@@ -92,11 +92,11 @@ a { color: inherit; }
 .screens { padding: 0 0 clamp(96px, 12vw, 180px); }
 .screens .head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: end; margin-bottom: clamp(48px, 6vw, 88px); }
 .screens .head .body { justify-self: end; margin: 0; }
-.rail { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(20px, 3vw, 44px); align-items: start; }
+.rail { display: grid; grid-template-columns: repeat(3, minmax(0, 300px)); justify-content: space-between; gap: clamp(20px, 3vw, 44px); align-items: start; max-width: 1060px; margin: 0 auto; }
 .rail figure:nth-child(2) { margin-top: clamp(40px, 7vw, 110px); }
 .rail figure:nth-child(3) { margin-top: clamp(20px, 3.5vw, 55px); }
 .phone { border-radius: 46px; padding: 9px; background: var(--ink); box-shadow: 0 40px 80px -30px oklch(35% 0.05 50 / .45); }
-.phone img { border-radius: 37px; width: 100%; aspect-ratio: 520 / 803; object-fit: cover; object-position: top; background: var(--paper); }
+.phone img { border-radius: 37px; width: 100%; aspect-ratio: 560 / 1240; object-fit: cover; background: var(--paper); }
 figcaption { margin-top: 22px; display: grid; grid-template-columns: auto 1fr; gap: 4px 14px; }
 figcaption b { grid-row: span 2; font-size: 15px; font-weight: 700; color: var(--ember); font-variant-numeric: tabular-nums; padding-top: 3px; }
 figcaption strong { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
@@ -160,7 +160,7 @@ figcaption span { color: var(--ink-2); font-size: 16px; }
   .hero-note { display: none; }
   .ritual .shell, .screens .head, .plans .grid, .final .shell { grid-template-columns: 1fr; }
   .screens .head .body { justify-self: start; }
-  .rail { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(72vw, 300px); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; margin: 0 calc(var(--gut) * -1); padding-left: var(--gut); padding-right: var(--gut); scrollbar-width: none; }
+  .rail { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: min(66vw, 260px); overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 12px; margin: 0 calc(var(--gut) * -1); padding-left: var(--gut); padding-right: var(--gut); scrollbar-width: none; }
   .rail::-webkit-scrollbar { display: none; }
   .rail figure { scroll-snap-align: start; margin-top: 0 !important; }
   .nots li, .tier { grid-template-columns: 1fr; gap: 8px; }

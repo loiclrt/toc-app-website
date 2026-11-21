@@ -244,3 +244,7 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-
 .nav .lang:hover { color: #000; border-color: rgba(0,0,0,.4); }
 .hero .ocd { font-size: clamp(15px, 1.5vw, 18px); color: #4a4843; margin-top: 10px; }
 html[lang="en"] .device img { aspect-ratio: 560 / 1184; }
+
+/* bouton Instagram */
+.btn.ig { gap: 9px; }
+.btn.ig svg { width: 18px; height: 18px; }

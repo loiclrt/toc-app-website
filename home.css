@@ -248,3 +248,7 @@ html[lang="en"] .device img { aspect-ratio: 560 / 1184; }
 /* bouton Instagram */
 .btn.ig { gap: 9px; }
 .btn.ig svg { width: 18px; height: 18px; }
+
+/* le haut de page dit que toc est une application */
+.hero .copy > .sub { max-width: 30ch; margin-left: auto; margin-right: auto; margin-top: 14px; line-height: 1.22; text-wrap: balance; }
+.hero .sub strong { font-weight: 700; color: var(--ink); }

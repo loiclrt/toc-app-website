@@ -285,3 +285,26 @@ html[lang="en"] .device img { aspect-ratio: 560 / 1184; }
 .promise.coral .words span { color: #1d1d1f; }
 .promise.coral .words span:nth-child(2) { color: rgba(29,29,31,.62); }
 .promise.coral .words span:nth-child(3) { color: rgba(29,29,31,.38); }
+
+/* Gratuit / Premium en 2 cartes de couleur vive (jaune, rouge-orange) */
+.cols { gap: 16px; max-width: 860px; }
+.col { padding: 36px 28px 40px; border-radius: 32px; background: #FFC247; color: var(--ink); }
+.col + .col { border-left: 0; background: #FF5A36; }
+.col .price { color: rgba(29,29,31,.72); }
+.col li .no { color: rgba(29,29,31,.3); }
+@media (max-width: 700px) {
+  .cols { gap: 14px; }
+  .col { padding: 32px 22px 36px; border-radius: 28px; }
+  .col + .col { border-top: 0; padding-top: 32px; }
+}
+
+/* texte beige cassé sur le rouge-orange (carte Premium et bloc « Sans compte ») */
+:root { --creme: #FAF0E4; }
+.col + .col { color: var(--creme); }
+.col + .col .price { color: rgba(250,240,228,.88); }
+.col + .col .btn.fill { background: var(--creme); color: var(--ink); border-color: var(--creme); }
+.tile.coral, .tile.coral .sub { color: var(--creme); }
+.tile.coral .eyebrow.c { color: rgba(250,240,228,.85); }
+.promise.coral .words span { color: var(--creme); }
+.promise.coral .words span:nth-child(2) { color: rgba(250,240,228,.72); }
+.promise.coral .words span:nth-child(3) { color: rgba(250,240,228,.48); }

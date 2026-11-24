@@ -226,11 +226,22 @@ a:focus-visible, .btn:focus-visible { outline: 3px solid var(--accent); outline-
 /* pleine conscience : trois temps du geste */
 .mindful { max-width: 900px; margin: 40px auto 0; }
 .mindful-lead { font-size: clamp(19px, 2vw, 24px); line-height: 1.35; font-weight: 500; max-width: 30ch; margin: 0 auto; text-wrap: balance; }
-.steps { list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 36px; text-align: center; }
-.steps b { display: grid; place-items: center; width: 40px; height: 40px; margin: 0 auto 14px; border-radius: 50%; background: #fff; color: #2C9C9A; font-size: 17px; font-weight: 700; box-shadow: 0 0 0 6px rgba(44,156,154,.12), 0 0 0 12px rgba(44,156,154,.06); }
-.steps strong { display: block; font-size: 21px; font-weight: 700; letter-spacing: -0.02em; }
-.steps span { display: block; margin-top: 6px; color: var(--ink-2); font-size: 16px; line-height: 1.45; max-width: 26ch; margin-left: auto; margin-right: auto; }
-@media (max-width: 700px) { .steps { grid-template-columns: 1fr; gap: 26px; } }
+/* 3 étapes en cartes empilées, couleurs du dégradé toc */
+.steps { list-style: none; max-width: 600px; margin: 40px auto 0; text-align: left; }
+.steps li { position: relative; min-height: 170px; padding: 26px 32px 58px 32px; border-radius: 32px; background: var(--c); box-shadow: 0 -1px 0 rgba(255,255,255,.35) inset, 0 -10px 24px -14px rgba(0,0,0,.25); }
+.steps li + li { margin-top: -34px; }
+.steps li:nth-child(1) { --c: #FFC247; }
+.steps li:nth-child(2) { --c: #FF8A4C; }
+.steps li:nth-child(3) { --c: #FF5A36; padding-bottom: 30px; min-height: 160px; }
+.steps b { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.steps strong { display: inline-block; padding: 7px 16px 8px; border-radius: 980px; background: rgba(255,255,255,.55); font-size: 21px; font-weight: 700; letter-spacing: -0.02em; color: var(--ink); }
+.steps span { display: block; margin-top: 14px; color: #1d1d1f; font-size: 16px; line-height: 1.45; max-width: 40ch; }
+@media (max-width: 700px) {
+  .steps li { padding: 22px 24px 54px 24px; min-height: 0; border-radius: 28px; }
+  .steps li:nth-child(3) { padding-bottom: 26px; min-height: 0; }
+  .steps strong { font-size: 19px; }
+}
+@media (forced-colors: active) { .steps li { border: 2px solid CanvasText; } }
 
 /* badges : toujours côte à côte, « Bientôt » sous Google Play pour lever l'ambiguïté */
 .stores { flex-wrap: nowrap; gap: 12px; padding-bottom: 22px; }
@@ -252,3 +263,9 @@ html[lang="en"] .device img { aspect-ratio: 560 / 1184; }
 /* le haut de page dit que toc est une application */
 .hero .copy > .sub { max-width: 30ch; margin-left: auto; margin-right: auto; margin-top: 14px; line-height: 1.22; text-wrap: balance; }
 .hero .sub strong { font-weight: 700; color: var(--ink); }
+
+/* engagement : trois mots géants, du blanc vers le gris (style keynote) */
+.promise .words { margin: 56px auto 0; padding: 0 24px; font-size: clamp(48px, 9vw, 112px); font-weight: 700; letter-spacing: -0.045em; line-height: 1.02; }
+.promise .words span { display: block; color: #f5f5f7; }
+.promise .words span:nth-child(2) { color: #86868b; }
+.promise .words span:nth-child(3) { color: #48484a; }

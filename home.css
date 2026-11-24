@@ -269,3 +269,19 @@ html[lang="en"] .device img { aspect-ratio: 560 / 1184; }
 .promise .words span { display: block; color: #f5f5f7; }
 .promise .words span:nth-child(2) { color: #86868b; }
 .promise .words span:nth-child(3) { color: #48484a; }
+
+/* démo du geste posée dans une carte blanche, pour qu'elle ne flotte plus */
+.demo { box-sizing: border-box; width: min(600px, calc(100vw - 48px)); aspect-ratio: auto; margin: 56px auto 72px; padding: 64px 44px 76px; background: #fff; border-radius: 36px; box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 24px 60px -30px rgba(0,0,0,.18); overflow: hidden; }
+.demo-label { bottom: 30px; }
+.demo-done { top: 24px; }
+@media (max-width: 480px) { .demo { padding: 56px 24px 68px; border-radius: 28px; } .demo-label { bottom: 26px; } .demo-done { top: 20px; } }
+
+/* blocs noirs remplacés par des aplats aux couleurs des cartes (jaune, orange, rouge-orange) */
+.tile.sun { background: #FFC247; } .tile.tan { background: #FF8A4C; } .tile.coral { background: #FF5A36; }
+.tile.sun, .tile.tan, .tile.coral { color: var(--ink); }
+:is(.sun, .tan, .coral) .sub { color: #1d1d1f; }
+:is(.sun, .tan, .coral) .eyebrow.c { color: rgba(29,29,31,.7); }
+:is(.sun, .tan, .coral) .more { color: var(--ink); font-weight: 700; }
+.promise.coral .words span { color: #1d1d1f; }
+.promise.coral .words span:nth-child(2) { color: rgba(29,29,31,.62); }
+.promise.coral .words span:nth-child(3) { color: rgba(29,29,31,.38); }
